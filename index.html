@@ -1,13 +1,26 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta name="generator" content="PWA Starter Kit">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="PWA Starter Kit">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons&display=block">
-  </head>
-  <body>
-    <my-app appTitle="My App"></my-app>
-    <script type="module" src="./my-app.js"></script>
-  </body>
+
+<head>
+  <meta name="generator" content="PWA Starter Kit">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="PWA Starter Kit">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons&display=block">
+  <style>
+    body {
+      margin: 0;
+      /* This is a font-stack that tries to use the system-default sans-serifs first */
+      font-family: Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      line-height: 1.5;
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
+  </style>
+</head>
+
+<body>
+  <my-app appTitle="My App"></my-app>
+  <script type="module" src="./my-app.js"></script>
+</body>
+
 </html>
