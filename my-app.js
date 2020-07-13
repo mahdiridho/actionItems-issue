@@ -8,7 +8,7 @@ class MyApp extends (LitElement) {
     return html`
       <style>
         mwc-drawer {
-          border: 1px solid red;
+          margin: -10px;
         }
         mwc-icon-button.menu[hidden] {
           display: none;
