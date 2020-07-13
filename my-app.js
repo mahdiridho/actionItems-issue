@@ -10,6 +10,7 @@ class MyApp extends (LitElement) {
         mwc-icon-button.menu[hidden] {
           display: none;
         }
+        # It never worked
         mdc-drawer[open]:not(type="modal") {
           --mdc-top-app-bar-width: calc(100% - var(--mdc-drawer-width, 256px));
         }
@@ -61,8 +62,12 @@ class MyApp extends (LitElement) {
 
   firstUpdated() {
     this.installMediaQueryWatcher(`(min-width: 460px)`, desktop => {
+      // Test top-app-bar adjustment
+      // It never worked
+      if (desktop) {
+        this.shadowRoot.querySelector("mwc-top-app-bar").style["--mdc-top-app-bar-width"] = "300px";
+      }
       this.desktop = desktop
-      console.log(this.desktop)
     });
   }
 }
