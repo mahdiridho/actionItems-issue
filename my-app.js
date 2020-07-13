@@ -1,26 +1,22 @@
-import { LitElement, css, html } from 'lit-element';
+import { LitElement, html } from 'lit-element';
 import '@material/mwc-drawer';
 import '@material/mwc-top-app-bar';
 import '@material/mwc-icon-button';
 
 class MyApp extends (LitElement) {
-  static get styles() {
-    return [
-      css`
+  render() {
+    return html`
+      <style>
+        mwc-drawer {
+          border: 1px solid red;
+        }
         mwc-icon-button.menu[hidden] {
           display: none;
         }
-        # It never worked
-        mdc-drawer[open]:not(type="modal") {
-          --mdc-top-app-bar-width: calc(100% - var(--mdc-drawer-width, 256px));
+        mwc-top-app-bar {
+          --mdc-top-app-bar-width: ${this.desktop?'calc(100% - 256px)':'100%'};
         }
-      `
-    ];
-  }
-
-  render() {
-    return html`
-      <!-- Header -->
+      </style>
       <mwc-drawer hasHeader .type="${this.desktop ? '' : 'modal'}" ?open=${this.drawerState} @MDCDrawer:closed="${() => this.drawerState = !this.drawerState}">
         <span slot="title">Menu</span>
         <span slot="subtitle">subtitle</span>
@@ -62,11 +58,6 @@ class MyApp extends (LitElement) {
 
   firstUpdated() {
     this.installMediaQueryWatcher(`(min-width: 460px)`, desktop => {
-      // Test top-app-bar adjustment
-      // It never worked
-      if (desktop) {
-        this.shadowRoot.querySelector("mwc-top-app-bar").style["--mdc-top-app-bar-width"] = "300px";
-      }
       this.desktop = desktop
     });
   }

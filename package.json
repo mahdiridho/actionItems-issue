@@ -19,7 +19,7 @@
   "dependencies": {
     "@material/mwc-drawer": "^0.17.2",
     "@material/mwc-icon-button": "^0.17.2",
-    "@material/mwc-top-app-bar": "^0.17.2",
+    "@material/mwc-top-app-bar": "^0.18.0-canary.efdfbc21.0",
     "lit-element": "^2.3.1"
   }
 }
