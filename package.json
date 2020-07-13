@@ -1,0 +1,25 @@
+{
+  "name": "actionitems-issue",
+  "version": "1.0.0",
+  "description": "mwc-top-app-bar slot actionItems disappear on desktop media",
+  "main": "my-app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mahdiridho/actionItems-issue.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mahdiridho/actionItems-issue/issues"
+  },
+  "homepage": "https://github.com/mahdiridho/actionItems-issue#readme",
+  "dependencies": {
+    "@material/mwc-drawer": "^0.17.2",
+    "@material/mwc-icon-button": "^0.17.2",
+    "@material/mwc-top-app-bar": "^0.17.2",
+    "lit-element": "^2.3.1"
+  }
+}
