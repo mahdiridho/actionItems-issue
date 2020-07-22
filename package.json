@@ -17,9 +17,9 @@
   },
   "homepage": "https://github.com/mahdiridho/actionItems-issue#readme",
   "dependencies": {
-    "@material/mwc-drawer": "^0.18.0-canary.f6a6ca38.0",
+    "@material/mwc-drawer": "^0.17.2",
     "@material/mwc-icon-button": "^0.17.2",
-    "@material/mwc-top-app-bar": "^0.18.0-canary.f6a6ca38.0",
+    "@material/mwc-top-app-bar": "canary",
     "lit-element": "^2.3.1"
   }
 }
